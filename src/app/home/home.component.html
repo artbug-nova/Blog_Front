@@ -1,0 +1,5 @@
+<p>home works!</p>
+<p>{{count}}</p>
+<input type="text" [(ngModel)]="name" value="{{name}}"/>
+<button (click)="increase($event)">Click</button>
+<app-child [userName]="name" [userAge]="count" (onChanged)="onChanged($event)"></app-child>
