@@ -2,4 +2,5 @@
 <p>{{count}}</p>
 <input type="text" [(ngModel)]="name" value="{{name}}"/>
 <button (click)="increase($event)">Click</button>
+<mat-slider min="1" max="100" step="1" value="1"></mat-slider>
 <app-child [userName]="name" [userAge]="count" (onChanged)="onChanged($event)"></app-child>

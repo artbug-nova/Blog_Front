@@ -1,9 +1,11 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-
+import { DataService } from '../data.service'
+import { LogService } from '../log.service';
 @Component({
   selector: 'app-child',
   templateUrl: './child.component.html',
-  styleUrls: ['./child.component.css']
+  styleUrls: ['./child.component.css'],
+  providers: [DataService, LogService]
 })
 export class ChildComponent implements OnInit {
   @Input() 
@@ -20,9 +22,10 @@ export class ChildComponent implements OnInit {
 
 
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
+    console.log(this.dataService.getData())
   }
 
 }
