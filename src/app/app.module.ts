@@ -9,7 +9,12 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { FormsModule } from '@angular/forms';
 import { ChildComponent } from './child/child.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HeaderComponent } from './header/header.component';
 import { MatSliderModule } from '@angular/material/slider';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatCardModule } from '@angular/material/card';
+import { MainPostComponent } from './main-post/main-post.component';
+import { PostComponent } from './post/post.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -24,7 +29,10 @@ const appRoutes: Routes = [
     HomeComponent,
     AboutComponent,
     NotFoundComponent,
-    ChildComponent
+    ChildComponent,
+    HeaderComponent,
+    MainPostComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +41,9 @@ const appRoutes: Routes = [
     FormsModule,
     BrowserAnimationsModule,
     MatSliderModule,
+    MatToolbarModule,
+    MatToolbarModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
