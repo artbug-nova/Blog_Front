@@ -15,6 +15,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MainPostComponent } from './main-post/main-post.component';
 import { PostComponent } from './post/post.component';
+import { HttpClientModule } from '@angular/common/http'; 
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -44,6 +45,7 @@ const appRoutes: Routes = [
     MatToolbarModule,
     MatToolbarModule,
     MatCardModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
