@@ -17,31 +17,9 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.onLoadData();
-  }
-
-  posts: Post[] = [];
-
-
-  data1:any = null;
-  count: number = 1;
-  name:string = "Kate";
-  increase(event:any): void{
-    console.log(event);
-    this.count++;
-    alert(this.name);
+    //this.onLoadData();
   }
 
 
-  onChanged(increased:any){
-    increased == true? this.count++:this.count--;
-  }
 
-   onLoadData(){
-    this.serv.getData("api/post/all").subscribe((arg:Post[]) => {
-      this.posts = arg;
-      console.log(this.posts);
-    });
-    ;
-  }
 }

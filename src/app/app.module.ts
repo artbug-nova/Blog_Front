@@ -7,15 +7,16 @@ import { AboutComponent } from './about/about.component';
 import { Routes, RouterModule } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { FormsModule } from '@angular/forms';
-import { ChildComponent } from './child/child.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HeaderComponent } from './header/header.component';
-import { MatSliderModule } from '@angular/material/slider';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatCardModule } from '@angular/material/card';
 import { MainPostComponent } from './main-post/main-post.component';
 import { PostComponent } from './post/post.component';
 import { HttpClientModule } from '@angular/common/http'; 
+import { InputTextModule } from 'primeng/inputtext';
+import { CalendarModule } from 'primeng/calendar';
+import {MenubarModule} from 'primeng/menubar';
+import { HeaderComponent } from './header/header.component';
+
+
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -30,10 +31,9 @@ const appRoutes: Routes = [
     HomeComponent,
     AboutComponent,
     NotFoundComponent,
-    ChildComponent,
-    HeaderComponent,
     MainPostComponent,
-    PostComponent
+    PostComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,11 +41,11 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     FormsModule,
     BrowserAnimationsModule,
-    MatSliderModule,
-    MatToolbarModule,
-    MatToolbarModule,
-    MatCardModule,
     HttpClientModule,
+    InputTextModule,
+    CalendarModule,
+    MenubarModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
