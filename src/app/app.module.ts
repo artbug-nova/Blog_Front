@@ -13,14 +13,17 @@ import { PostComponent } from './post/post.component';
 import { HttpClientModule } from '@angular/common/http'; 
 import { InputTextModule } from 'primeng/inputtext';
 import { CalendarModule } from 'primeng/calendar';
-import {MenubarModule} from 'primeng/menubar';
+import { MenubarModule } from 'primeng/menubar';
 import { HeaderComponent } from './header/header.component';
-
-
+import { BreadcrumbModule } from 'primeng/breadcrumb';
+import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
+import { MapsComponent } from './maps/maps.component';
+import { GMapModule } from 'primeng/gmap';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
+  { path: 'maps', component: MapsComponent },
   { path: '**', component: NotFoundComponent },
 ]
 
@@ -34,6 +37,8 @@ const appRoutes: Routes = [
     MainPostComponent,
     PostComponent,
     HeaderComponent,
+    BreadcrumbComponent,
+    MapsComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,7 +50,8 @@ const appRoutes: Routes = [
     InputTextModule,
     CalendarModule,
     MenubarModule,
-    
+    BreadcrumbModule,
+    GMapModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
